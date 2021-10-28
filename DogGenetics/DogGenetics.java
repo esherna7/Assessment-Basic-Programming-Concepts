@@ -12,7 +12,7 @@ import java.util.*;
 
 public class DogGenetics {
 
-    static int num1, num2, num3, num4, num5;
+    private static int num1, num2, num3, num4, num5;
 
     public static void main(String args[]) {
         Scanner input = new Scanner(System.in);
@@ -20,8 +20,8 @@ public class DogGenetics {
         System.out.print("What is your dog's name? ");
         String userInput = input.nextLine();
 
-        System.out.println("Well then, I have this highly reliable report on "
-                + userInput + "'s prestigious background right here.\n");
+        System.out.println("Well then, I have this highly reliable report on " + userInput
+                + "'s prestigious background right here.\n");
 
         System.out.println(userInput + " is:\n");
         generateRandomPercentages();
@@ -37,15 +37,14 @@ public class DogGenetics {
 
     public static void generateRandomPercentages() {
         Random random = new Random();
-        int percentageLeft = 100;
-        num1 = random.nextInt(percentageLeft) + 1;
-        percentageLeft -= num1;
-        num2 = random.nextInt(percentageLeft) + 1;
-        percentageLeft -= num2;
-        num3 = random.nextInt(percentageLeft) + 1;
-        percentageLeft -= num3;
-        num4 = random.nextInt(percentageLeft) + 1;
-        percentageLeft -= num4;
-        num5 = percentageLeft;
+
+        do {
+            num1 = random.nextInt(100) + 1;
+            num2 = random.nextInt(100) + 1;
+            num3 = random.nextInt(100) + 1;
+            num4 = random.nextInt(100) + 1;
+            num5 = random.nextInt(100) + 1;
+        } while (num1 + num2 + num3 + num4 + num5 != 100);
+
     }
 }

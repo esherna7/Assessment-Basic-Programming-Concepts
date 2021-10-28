@@ -12,7 +12,7 @@ import java.util.*;
 
 public class RockPaperScissors {
 
-    static int numOfTies = 0, numOfUserWins = 0, numOfComputerWins = 0;
+    private static int numOfTies = 0, numOfUserWins = 0, numOfComputerWins = 0;
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
