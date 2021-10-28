@@ -21,6 +21,9 @@ public class RockPaperScissors {
         int userInput;
 
         do {
+            numOfTies = 0; 
+            numOfUserWins = 0; 
+            numOfComputerWins = 0;
             int numOfRounds = setNumOfRounds(input);
 
             // if rounds not between 0 or 10 quit game
@@ -80,6 +83,7 @@ public class RockPaperScissors {
 
         //End of game
         System.out.println("Thanks for playing!");
+        input.close();
     }
 
     public static void display() {
