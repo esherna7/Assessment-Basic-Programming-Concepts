@@ -1,13 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// author Esai Hernandez
 
-/**
- *
- * @author Esai Hernandez
- */
 import java.util.*;
 
 public class RockPaperScissors {
@@ -21,9 +13,11 @@ public class RockPaperScissors {
         int userInput;
 
         do {
+            // Reset game stats for new rounds
             numOfTies = 0; 
             numOfUserWins = 0; 
             numOfComputerWins = 0;
+            
             int numOfRounds = setNumOfRounds(input);
 
             // if rounds not between 0 or 10 quit game
@@ -48,7 +42,8 @@ public class RockPaperScissors {
                         System.out.println("Not a valid input");
                         return;
                     }
-
+                    
+                    // Verify user input is option choice between 1 - 3
                     if (userInput > 3 || userInput < 1) {
                         System.out.println("Not a valid Choice");
                     } else {
@@ -86,6 +81,7 @@ public class RockPaperScissors {
         input.close();
     }
 
+    // Print out Game Round Results
     public static void display() {
         System.out.println("\nUser Wins: " + numOfUserWins);
         System.out.println("Computer Wins: " + numOfComputerWins);
